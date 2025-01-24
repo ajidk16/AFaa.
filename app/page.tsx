@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  Accordion,
-  AccordionItem,
-  Card,
-  CardBody,
-  Image,
-  Tab,
-  Tabs,
-} from "@heroui/react";
+import { Accordion, AccordionItem, Image } from "@heroui/react";
 import { Link } from "@heroui/link";
 
 import Product from "@/components/Product";
@@ -17,18 +9,18 @@ import Title from "@/components/title";
 const defaultContent =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
-let tabs = [
-  {
-    label: "Visi",
-    content:
-      "Menjadi pilihan utama wewangian di Indonesia yang menghadirkan aroma memikat dan berkualitas tinggi,  serta menginspirasi kepercayaan diri dan ekspresi diri setiap individu.",
-  },
-  {
-    label: "Misi",
-    content:
-      "Menghadirkan Keharuman Berkualitas: Merancang dan menciptakan parfum dengan aroma unik dan tahan lama menggunakan bahan-bahan terbaik. Inovasi dan Kreativitas: Senantiasa berinovasi dalam mengembangkan wewangian yang mengikuti tren dan memenuhi kebutuhan pasar. Kepuasan Pelanggan: Memberikan pelayanan terbaik dan membangun hubungan yang erat dengan pelanggan. Harga Terjangkau: Menyediakan parfum berkualitas dengan harga yang kompetitif dan terjangkau bagi masyarakat Indonesia. Citra Positif: Membangun citra merek yang positif dan terpercaya di industri parfum.",
-  },
-];
+// let tabs = [
+//   {
+//     label: "Visi",
+//     content:
+//       "Menjadi pilihan utama wewangian di Indonesia yang menghadirkan aroma memikat dan berkualitas tinggi,  serta menginspirasi kepercayaan diri dan ekspresi diri setiap individu.",
+//   },
+//   {
+//     label: "Misi",
+//     content:
+//       "Menghadirkan Keharuman Berkualitas: Merancang dan menciptakan parfum dengan aroma unik dan tahan lama menggunakan bahan-bahan terbaik. Inovasi dan Kreativitas: Senantiasa berinovasi dalam mengembangkan wewangian yang mengikuti tren dan memenuhi kebutuhan pasar. Kepuasan Pelanggan: Memberikan pelayanan terbaik dan membangun hubungan yang erat dengan pelanggan. Harga Terjangkau: Menyediakan parfum berkualitas dengan harga yang kompetitif dan terjangkau bagi masyarakat Indonesia. Citra Positif: Membangun citra merek yang positif dan terpercaya di industri parfum.",
+//   },
+// ];
 
 export default function Home() {
   return (
