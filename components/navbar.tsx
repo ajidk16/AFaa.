@@ -13,16 +13,12 @@ import { Input } from "@heroui/input";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
+import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
+import { SearchIcon } from "@/components/icons";
 
 export const Navbar = () => {
   const searchInput = (
@@ -47,12 +43,13 @@ export const Navbar = () => {
   );
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar className="fixed" maxWidth="xl">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            <p className="font-extrabold text-2xl text-inherit">
+              {siteConfig.name}
+            </p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -78,24 +75,24 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.x}>
-            <TwitterIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Discord" href={siteConfig.links.fb}>
-            <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.ig}>
-            <GithubIcon className="text-default-500" />
-          </Link>
+          <NextLink aria-label="Twitter" href={siteConfig.links.x}>
+            <FaTwitter size={24} />
+          </NextLink>
+          <NextLink aria-label="Discord" href={siteConfig.links.fb}>
+            <FaFacebook size={24} />
+          </NextLink>
+          <NextLink aria-label="Github" href={siteConfig.links.ig}>
+            <RiInstagramFill size={24} />
+          </NextLink>
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.ig}>
-          <GithubIcon className="text-default-500" />
-        </Link>
+        <NextLink aria-label="Github" href={siteConfig.links.ig}>
+          <RiInstagramFill size={24} />
+        </NextLink>
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
