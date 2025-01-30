@@ -51,3 +51,6 @@ export const subtitle = tv({
     fullWidth: true,
   },
 });
+
+export const desc =
+  "flex flex-wrap justify-between gap-2 w-full absolute px-4 pt-3 z-10 transition-all duration-500 left-0 right-0 group-hover:bottom-20 lg:bottom-5 lg:opacity-0 lg:bg-white dark:bg-black lg:group-hover:opacity-100 max-lg:bottom-20 max-lg:py-3 max-lg:bg-white/60";

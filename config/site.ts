@@ -1,24 +1,24 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "DKaji.",
+  name: "AFaa.",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
       label: "Home",
       href: "/",
     },
+    // {
+    //   label: "Docs",
+    //   href: "/docs",
+    // },
+    // {
+    //   label: "Pricing",
+    //   href: "/pricing",
+    // },
     {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
+      label: "Products",
+      href: "/products",
     },
     {
       label: "About",
