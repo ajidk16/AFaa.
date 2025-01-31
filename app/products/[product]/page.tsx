@@ -156,20 +156,20 @@ const ProductId = () => (
               aria-label="Action event example"
               onAction={(key) => alert(key)}
             >
-              <DropdownItem key="new" startContent={<SiShopee />}>
+              <DropdownItem key="shopee" startContent={<SiShopee />}>
                 Shopee
               </DropdownItem>
-              <DropdownItem key="copy" startContent={<SiTiktok />}>
+              <DropdownItem key="tiktok" startContent={<SiTiktok />}>
                 Tiktok
               </DropdownItem>
               <DropdownItem
-                key="copy"
+                key="lazada"
                 startContent={<IcLazada className="h-4 w-4 text-black" />}
               >
                 Lazada
               </DropdownItem>
               <DropdownItem
-                key="copy"
+                key="tokopedia"
                 startContent={<IcTokped className="h-4 w-4 text-black" />}
               >
                 Tokopedia

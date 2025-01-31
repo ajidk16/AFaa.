@@ -25,7 +25,7 @@ const Product = () => {
             />
           </div>
 
-          <Link href="http://localhost:3000/products/1">
+          <Link href="/products/1">
             <div className="p-4 relative">
               <div className={desc}>
                 <button
