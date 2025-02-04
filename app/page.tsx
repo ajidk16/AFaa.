@@ -1,19 +1,118 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Accordion, AccordionItem, Image } from "@heroui/react";
+import { Accordion, AccordionItem, Image, ScrollShadow } from "@heroui/react";
 import { Link } from "@heroui/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-import Product from "@/components/Product";
 import Title from "@/components/title";
+import ProductListItem, { ProductItem } from "@/components/products/ListItem";
+import { Bann1, Bann2 } from "@/assets/png";
 
 const defaultContent =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
 const datas = [1, 1, 1, 1];
 
+const products: ProductItem[] = [
+  {
+    id: "1",
+    name: "Training shoes",
+    href: "/products/1",
+    price: 49.99,
+    color: "black",
+    size: "42",
+    imageSrc:
+      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/1.png",
+  },
+  {
+    id: "2",
+    name: "Sneakers",
+    isNew: true,
+    // isPopular: true,
+    href: "/products/1",
+    price: 29.99,
+    color: "red",
+    size: "42",
+    imageSrc:
+      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/11.png",
+  },
+  {
+    id: "3",
+    name: "Running shoes",
+    href: "/products/1",
+    price: 39.99,
+    color: "blue",
+    size: "42",
+    imageSrc:
+      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/10.png",
+  },
+  {
+    id: "4",
+    name: "Training shoes",
+    href: "/products/1",
+    price: 49.99,
+    color: "black",
+    size: "42",
+    imageSrc:
+      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/31.png",
+  },
+  {
+    id: "5",
+    name: "Sneakers",
+    href: "/products/1",
+    price: 29.99,
+    color: "red",
+    size: "42",
+    imageSrc:
+      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/34.png",
+  },
+  {
+    id: "6",
+    name: "Running shoes",
+    href: "/products/1",
+    price: 39.99,
+    color: "blue",
+    size: "42",
+    imageSrc:
+      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/6.png",
+  },
+  {
+    id: "7",
+    name: "Training shoes",
+    href: "/products/1",
+    price: 49.99,
+    color: "black",
+    size: "42",
+    imageSrc:
+      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/7.png",
+  },
+  {
+    id: "8",
+    name: "Sneakers",
+    href: "/products/1",
+    price: 29.99,
+    color: "red",
+    size: "42",
+    imageSrc:
+      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/8.png",
+  },
+  {
+    id: "9",
+    name: "Running shoes",
+    href: "/products/1",
+    price: 39.99,
+    color: "blue",
+    size: "42",
+    imageSrc:
+      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/shoes/19.png",
+  },
+];
+
 export default function Home() {
+  // console.log("aman jaya", Bann1);
+
   return (
     <section className="flex flex-col items-center justify-center gap-4 mt-8">
       <section className="bg-inherit w-full font-[sans-serif] my-8">
@@ -70,8 +169,41 @@ export default function Home() {
       </section>
 
       <section className="my-8 w-full">
-        <Title desc="kami menyediakan parfum" title="Product Kami" />
-        <Product />
+        <Image className="pb-8" src={Bann1.src} />
+        <Title desc="kami menyediakan parfum" title="Eau de Parfum" />
+        {/* <Product /> */}
+        <ScrollShadow
+          className="-mx-6 -my-5 flex w-full max-w-full snap-x justify-start gap-6 px-6 py-5"
+          orientation="horizontal"
+          size={20}
+        >
+          {products.map((product) => (
+            <ProductListItem
+              key={product.id}
+              {...product}
+              className="snap-start"
+            />
+          ))}
+        </ScrollShadow>
+      </section>
+
+      <section className="my-8 w-full">
+        <Image className="pb-8" src={Bann2.src} />
+        <Title desc="kami menyediakan parfum" title="Eau de Toilette" />
+        {/* <Product /> */}
+        <ScrollShadow
+          className="-mx-6 -my-5 flex w-full max-w-full snap-x justify-start gap-6 px-6 py-5"
+          orientation="horizontal"
+          size={20}
+        >
+          {products.map((product) => (
+            <ProductListItem
+              key={product.id}
+              {...product}
+              className="snap-start"
+            />
+          ))}
+        </ScrollShadow>
       </section>
 
       <section className="my-8 w-full">
